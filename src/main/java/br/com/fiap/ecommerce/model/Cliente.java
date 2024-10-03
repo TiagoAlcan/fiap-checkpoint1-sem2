@@ -1,5 +1,6 @@
 package br.com.fiap.ecommerce.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,17 +9,35 @@ import jakarta.persistence.Id;
 @Entity
 public class Cliente {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String nome;
-    private String cep;
-    private String logradouro;
-    private String numero;
-    private String complemento;
-    private String bairro;
-    private String municipio;
-    private String uf;
+	 @Id
+	    @GeneratedValue(strategy = GenerationType.AUTO)
+	    private Long id;
+
+	    @Column(nullable = false)
+	    private String nome;
+
+	    @Column(nullable = false)
+	    private String bairro;
+
+	    @Column(nullable = false)
+	    private String cep;
+
+	    @Column
+	    private String complemento;
+
+	    @Column(nullable = false)
+	    private String logradouro;
+
+	    @Column(nullable = false)
+	    private String municipio;
+
+	    @Column(nullable = false)
+	    private String numero;
+
+	    @Column(nullable = false, length = 2)
+	    private String uf;
+	    
+	    
     public Long getId() {
         return id;
     }
