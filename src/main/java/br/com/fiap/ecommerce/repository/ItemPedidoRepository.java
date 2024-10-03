@@ -3,9 +3,9 @@ package br.com.fiap.ecommerce.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import br.com.fiap.ecommerce.model.Cliente;
+import br.com.fiap.ecommerce.model.ItemPedido;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<Cliente, Long>{
+public interface ItemPedidoRepository extends JpaRepository<ItemPedido, Long>{
 
 }

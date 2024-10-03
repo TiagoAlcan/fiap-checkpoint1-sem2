@@ -1,71 +1,11 @@
-# E-commerce
+# CheckPoint 1 do 2° Semestre de Microsservices
 
-## Database
+Desenvolvido por:
 
-* Mysql (local)
+- Tiago Gomes Alcântara / RM 95849	
+- Guilherme Loureiro / RM 88722
 
-```sh
-docker run -d \
-    --name mysql \
-    --rm \
-    -e MYSQL_ROOT_PASSWORD=root_pwd \
-    -p 3306:3306 \
-    mysql
-```
+Repositórios:
 
-application.properties
-
-```
-spring.datasource.url=jdbc:mysql://localhost:3306/api?createDatabaseIfNotExist=true
-spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
-```
-
-## Environment
-
-.env
-
-```
-DATABASE_URL=jdbc:mysql://localhost:3306/api?createDatabaseIfNotExist=true
-DATABASE_USER=root
-DATABASE_PWD=root_pwd
-```
-
-* load .env
-
-```sh
-export $(cat .env | xargs)
-```
-
-## Maven
-
-* run
-
-```sh
-mvn spring-boot:run -Dspring-boot.run.profiles=dev
-```
-
-## Docker
-
-* build 
-
-```sh
-docker build -t ecommerce .
-```
-
-* run
-
-```sh
-docker run -d \
-    --network host \
-    -p 8080:8080  \
-    -e PROFILE=dev \
-    -e DATABASE_URL=jdbc:mysql://localhost:3306/api?createDatabaseIfNotExist=true \
-    -e DATABASE_USER=root \
-    -e DATABASE_PWD=root_pwd \
-    ecommerce
-```
-
-
-
-
-
+- https://github.com/TiagoAlcan/fiap-checkpoint1-sem2
+-
